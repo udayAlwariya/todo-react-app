@@ -7,8 +7,8 @@ import { Timer } from './Components/Timer';
 function App() {
     return (
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/timer' element={<Timer />} />
+        <Route path='/todo-react-app/' element={<Home />} />
+        <Route path='/todo-react-app/timer' element={<Timer />} />
       </Routes>
     );
 }
