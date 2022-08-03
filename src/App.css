@@ -2,6 +2,13 @@ body{
     background-color: #a29bfe;
 }
 
+.bg-purple{
+    background-color: #6c5ce7 !important;
+}
+
+.bg-purple-light{
+    background-color: #a29bfe !important;
+}
 .floating-button{
     width: 75px;
     height: 75px;
@@ -26,6 +33,10 @@ body{
     transform: scale(1);
 }
 
+.floating-button a {
+    text-decoration: none;
+} 
+
 .main-container{
     overflow-y: scroll;
 }
@@ -49,9 +60,4 @@ input:focus{
         margin: 0 !important;
     }
 
-    h2{
-        background-color: #6c5ce7;
-        color: #fff;
-        padding: 2%;
-    }
 }

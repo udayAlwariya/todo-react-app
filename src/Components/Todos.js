@@ -8,10 +8,10 @@ export const Todos = (props)=>{
   }
     return (
       <div
-        className='card mx-auto my-4 shadow-lg main-container'
+        className='card mx-auto mt-4 shadow-lg main-container'
         style={{ width: '70vw', height: '90vh' }}
       >
-        <h2 className='card-title text-center mt-4'>
+        <h2 className='text-center shadow p-1 bg-purple text-white'>
           <i>{props.title}</i>
         </h2>
         <div className='p-2'>
@@ -19,30 +19,30 @@ export const Todos = (props)=>{
             type='text'
             className='form-controol'
             placeholder='Add Todo'
-            onKeyUp={
-              (e)=>{
-                if(e.code==='Enter'){
-                  props.onAdd(todo);
-                  e.target.value="";
-                }
+            onKeyUp={(e) => {
+              if (e.code === 'Enter') {
+                props.onAdd(todo);
+                e.target.value = '';
               }
-            }
+            }}
             onChange={(e) => {
               todo.title = e.target.value;
             }}
           />
         </div>
         <div className='p-3'>
-          {props.todos.map((todo) => {
-            return (
-              <TodoItem
-                key={todo.id}
-                todo={todo}
-                onDelete={props.onDelete}
-                onDone={props.onDone}
-              />
-            );
-          })}
+          {props.todos.length === 0
+            ? 'No Taks...'
+            : props.todos.map((todo) => {
+                return (
+                  <TodoItem
+                    key={todo.id}
+                    todo={todo}
+                    onDelete={props.onDelete}
+                    onDone={props.onDone}
+                  />
+                );
+              })}
         </div>
       </div>
     );
