@@ -50,7 +50,7 @@ export const Timer = ()=>{
             </div>
           </div>
         </div>
-        <FloatingButton icon='📝' path='/' />
+        <FloatingButton icon='📝' path='/todo-react-app/' />
       </>
     );
 }
