@@ -55,7 +55,7 @@ export const Home = () => {
         onDone={onDone}
         onAdd={onAdd}
       />
-      <FloatingButton icon="⏰" path="timer"/>
+      <FloatingButton icon='far fa-clock' path='timer' />
     </>
   );
 };

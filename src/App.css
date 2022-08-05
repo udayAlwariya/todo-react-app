@@ -1,3 +1,6 @@
+*{
+    scroll-behavior: smooth;
+}
 body{
     background-color: #a29bfe;
 }
@@ -35,25 +38,52 @@ body{
 
 .floating-button a {
     text-decoration: none;
+    color: white;
 } 
 
 .main-container{
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 input{
+    border: #999;
+    background-color: #f1f1f1;
     width: 100%;
     padding:10px; 
-    border: #6c5ce7 solid;
     border-radius:50px; 
     border-color:#a29bfe !important
 }
 
 input:focus{
     outline: none;
+    border: #6c5ce7 solid;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #00000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
 }
 
 @media screen and (max-width: 480px) {
+    body{
+        overflow-x: hidden;
+    }
     .main-container{
         width: 100vw !important;
         height: 100vh !important;

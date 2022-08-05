@@ -12,23 +12,28 @@ export const Todos = (props)=>{
         style={{ width: '70vw', height: '90vh' }}
       >
         <h2 className='text-center shadow p-1 bg-purple text-white'>
-          <i>{props.title}</i>
+          <i className='fas fa-clipboard-list'></i> ToDo
         </h2>
-        <div className='p-2'>
-          <input
-            type='text'
-            className='form-controol'
-            placeholder='Add Todo'
-            onKeyUp={(e) => {
-              if (e.code === 'Enter') {
-                props.onAdd(todo);
-                e.target.value = '';
-              }
-            }}
-            onChange={(e) => {
-              todo.title = e.target.value;
-            }}
-          />
+        <div className='row p-2'>
+          <div className='col'>
+            <input
+              type='text'
+              className='form-controol'
+              placeholder='Add Todo'
+              onKeyUp={(e) => {
+                if (e.code === 'Enter') {
+                  props.onAdd(todo);
+                  e.target.value = '';
+                }
+              }}
+              onChange={(e) => {
+                todo.title = e.target.value;
+              }}
+            />
+          </div>
+          <div className='col-3 col-sm-1'>
+            <button className="bg-purple text-white btn">Add</button>
+          </div>
         </div>
         <div className='p-3'>
           {props.todos.length === 0
