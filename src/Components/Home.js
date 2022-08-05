@@ -38,6 +38,10 @@ export const Home = () => {
   };
 
   const onAdd = (todo) => {
+    if(todo.title===""){
+      alert("Please enter a todo task");
+      return
+    }
     console.log(todo);
     let updatedTodos = [todo, ...todos];
     setTodos(updatedTodos);

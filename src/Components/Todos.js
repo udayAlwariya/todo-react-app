@@ -32,7 +32,10 @@ export const Todos = (props)=>{
             />
           </div>
           <div className='col-3 col-sm-1'>
-            <button className="bg-purple text-white btn">Add</button>
+            <button className="bg-purple text-white btn" onClick={()=>{
+              props.onAdd(todo);
+              document.querySelector('input').value = '';
+            }}>Add</button>
           </div>
         </div>
         <div className='p-3'>
