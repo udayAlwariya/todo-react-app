@@ -78,7 +78,7 @@ export const Timer = ()=>{
                     </div>
                     <div className='col-2 my-auto'>
                       <button
-                        className='btn bg-purple-light text-white'
+                        className='btn bg-purple text-white'
                         onClick={() => {
                           let val = document.querySelector('input').value;
                           startTimer(val);
@@ -93,7 +93,7 @@ export const Timer = ()=>{
               ) : (
                 <div className='col'>
                   <button
-                    className='btn bg-purple-light text-white'
+                    className='btn bg-purple text-white'
                     onClick={stopTimer}
                   >
                     Stop

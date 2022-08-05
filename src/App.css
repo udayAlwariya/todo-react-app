@@ -9,6 +9,10 @@ body{
     background-color: #6c5ce7 !important;
 }
 
+.btn .bg-purple:hover{
+    background-color: #a29bfe;
+}
+
 .bg-purple-light{
     background-color: #a29bfe !important;
 }
