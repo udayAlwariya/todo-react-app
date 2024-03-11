@@ -9,6 +9,7 @@ function App() {
         <Route path='todo-react-app/' element={<Home />} />
         <Route path='todo-react-app/timer' element={<Timer />} />
       </Routes>
+//added new line
     );
 }
 
